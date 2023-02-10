@@ -63,10 +63,8 @@ https://user-images.githubusercontent.com/14284928/217977267-cfc96121-7b95-4101-
 
 6. Crear Credencial OCI, para relaizar conexión con Tenant
 
-```
-Importante seguir todos los pasos del video, la región para cada caso se puede encontrar en:
+Importante seguir todos los pasos del video. La región para cada caso se puede encontrar en:
 https://docs.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm
-```
 
 
 https://user-images.githubusercontent.com/14284928/217977931-f72d80ae-f510-4f52-af31-197673bced2f.mov
