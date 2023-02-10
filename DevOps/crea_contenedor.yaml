@@ -12,12 +12,10 @@
   - name: Clona Repositorio Git
     ansible.builtin.git:
       repo: "{{ url_git }}"
-      dest: "Race-to-the-Cloud-app"
+      dest: "/tmp/Race-to-the-Cloud-app"
 
   - name: Busca Directorio
-    ansible.builtin.find:
-      paths: "/"
-      patterns: "Race-to-the-Cloud-app"
+    ansible.builtin.shell: "ls /tmp"
     register: salida
     
   - debug:
@@ -27,7 +25,7 @@
     containers.podman.podman_image:
       name: "ciregistry"
       tag: "latest"
-      path: "Race-to-the-Cloud-app"
+      path: "/tmp/Race-to-the-Cloud-app"
       push: yes
       push_args:
         dest: "scl.ocir.io/axmdrz5zetbw"
