@@ -16,9 +16,9 @@
 
   - name: Build and push an image using existing credentials
     containers.podman.podman_image:
-      name: "ciregistry"
+      name: "scl.ocir.io/axmdrz5zetbw/ciregistry"
       tag: "latest"
       path: "/tmp/Race-to-the-Cloud-app/"
       push: "yes"
-      push_args:
-        dest: "scl.ocir.io/axmdrz5zetbw"
+#      push_args:
+#        dest: "scl.ocir.io/axmdrz5zetbw"
