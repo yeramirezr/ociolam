@@ -44,7 +44,7 @@ https://user-images.githubusercontent.com/14284928/217977014-8c324c4f-0c7b-4781-
 https://user-images.githubusercontent.com/14284928/217977128-936480e4-6dd3-44f1-afe5-5c5ec1326d8d.mov
 
 
-5. Creacion de Credencial Localhost, para realizar conexiones locales
+5. Crear Credencial Localhost, para realizar conexiones locales
 
 ```
 Menu > Credenciales > Añadir
@@ -61,7 +61,16 @@ Menu > Inventarios > Selecionar Inventario > Servidores
 https://user-images.githubusercontent.com/14284928/217977267-cfc96121-7b95-4101-a2d6-3d99ae4e02bb.mov
 
 
-6. das
+6. Crear Credencial OCI, para relaizar conexión con Tenant
+
+```
+Impiortante seguir todos los pasos del video
+```
+
+
+https://user-images.githubusercontent.com/14284928/217977931-f72d80ae-f510-4f52-af31-197673bced2f.mov
+
+
 7. das
 8. asd
 9. das
