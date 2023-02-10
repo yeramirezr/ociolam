@@ -31,12 +31,42 @@ https://user-images.githubusercontent.com/14284928/217976766-5c5407ea-f329-499f-
 3. Crear compartment llamado RaceToCloud
 
 	```
-	Menu -> Identity & Security -> Compartmente -> New Compartment
+	Menu > Identity & Security > Compartmente > New Compartment
 	```
 
 
 https://user-images.githubusercontent.com/14284928/217977014-8c324c4f-0c7b-4781-8e6b-de335c80605d.mov
 
 
-4. 
+4. Login Dentro de OLAM (https://158.101.114.83/)
+
+
+https://user-images.githubusercontent.com/14284928/217977128-936480e4-6dd3-44f1-afe5-5c5ec1326d8d.mov
+
+
+5. Creacion de Credencial Localhost, para realizar conexiones locales
+
+	```
+	Menu > Credenciales > Añadir
+	```
+
+https://user-images.githubusercontent.com/14284928/217977221-54813a8c-a65b-4de2-a11f-2b1906357a50.mov
+
+5.1. Test de credencial
+
+	```
+	Menu > Inventarios > Selecionar Inventario > Servidores
+	```
+
+https://user-images.githubusercontent.com/14284928/217977267-cfc96121-7b95-4101-a2d6-3d99ae4e02bb.mov
+
+
+6. das
+7. das
+8. asd
+9. das
+10. sda
+11. sda
+12. sda
+13. sdadad
 
