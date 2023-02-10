@@ -102,8 +102,52 @@ Menu > Plantillas > Añadir
 https://user-images.githubusercontent.com/14284928/217978340-ef6576f1-b656-4376-b178-beda5a67d928.mov
 
 
-10. sda
-11. sda
-12. sda
-13. sdadad
+10. Crear Template "Creacion Container Registry"
+
+```
+Menu > Plantillas > Añadir
+```
+
+
+https://user-images.githubusercontent.com/14284928/217978549-2f4e8c30-91ad-47bc-be99-bca765642116.mov
+
+
+
+11. Crear Template "Creacion VNC"
+
+```
+Menu > Plantillas > Añadir
+```
+
+
+https://user-images.githubusercontent.com/14284928/217978589-f75b797d-0b6c-414d-974b-b7dac22f1abd.mov
+
+
+
+12. Crear Template "Creacion Container Instance"
+
+```
+Menu > Plantillas > Añadir
+```
+
+
+https://user-images.githubusercontent.com/14284928/217978671-8a34b802-0bf3-4545-80c0-77ce2a5c0e5b.mov
+
+
+
+13. ads
+14. sda
+15. asd
+16. asd
+17. asd
+18. a
+19. asd
+20. a
+21. sd
+22. asd
+23. asd
+24. asd
+25. asd
+26. ads
+27. sdadad
 
