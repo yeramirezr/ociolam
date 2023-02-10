@@ -54,8 +54,9 @@ https://user-images.githubusercontent.com/14284928/217977221-54813a8c-a65b-4de2-
 
 5.1. Test de credencial
 
-
+```
 Menu > Inventarios > Selecionar Inventario > Servidores
+```
 
 https://user-images.githubusercontent.com/14284928/217977267-cfc96121-7b95-4101-a2d6-3d99ae4e02bb.mov
 
