@@ -30,9 +30,9 @@ https://user-images.githubusercontent.com/14284928/217976766-5c5407ea-f329-499f-
 
 3. Crear compartment llamado RaceToCloud
 
-	```
-	Menu > Identity & Security > Compartmente > New Compartment
-	```
+```
+Menu > Identity & Security > Compartmente > New Compartment
+```
 
 
 https://user-images.githubusercontent.com/14284928/217977014-8c324c4f-0c7b-4781-8e6b-de335c80605d.mov
