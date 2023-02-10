@@ -1,4 +1,4 @@
-## Desliegue Automatizado Utilizando Oracle Linux Automation Platform (OLAM) ##
+## Despliegue Automatizado Utilizando Oracle Linux Automation Platform (OLAM) 
 
 ### Requerimientos:
 
