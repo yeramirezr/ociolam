@@ -14,18 +14,11 @@
       repo: "{{ url_git }}"
       dest: "/tmp/Race-to-the-Cloud-app"
 
-  - name: Busca Directorio
-    ansible.builtin.shell: "ls /tmp"
-    register: salida
-    
-  - debug:
-      msg: "{{ salida }}"
-
   - name: Build and push an image using existing credentials
     containers.podman.podman_image:
       name: "ciregistry"
       tag: "latest"
-      path: "/tmp/Race-to-the-Cloud-app"
-      push: yes
+      path: "/tmp/Race-to-the-Cloud-app/"
+      push: "yes"
       push_args:
         dest: "scl.ocir.io/axmdrz5zetbw"
