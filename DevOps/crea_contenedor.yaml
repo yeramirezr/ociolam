@@ -1,0 +1,25 @@
+---
+- name: Crea y Configura VCN
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars_files:
+    - ../vault.yaml
+    - ../variables.yaml
+
+  tasks:
+  - name: Clona Repositorio Git
+    ansible.builtin.git:
+      repo: "{{ url_git }}"
+      dest: "/tmp"
+
+
+  - name: Build and push an image using existing credentials
+    containers.podman.podman_image:
+      name: "ciregistry"
+      tag: "latest"
+      path: "/tmp/Race-to-the-Cloud-app"
+      push: yes
+      push_args:
+        dest: "scl.ocir.io/axmdrz5zetbw"
