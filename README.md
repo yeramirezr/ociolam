@@ -74,7 +74,7 @@ https://user-images.githubusercontent.com/14284928/217977931-f72d80ae-f510-4f52-
 7. Crear Credencial Git, para conectar con GitHub
 
 ```
-Se realiza con Usuario y Contraseña de GitHib
+Se realiza con Usuario y Contraseña de GitHub
 ```
 
 
