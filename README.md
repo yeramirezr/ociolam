@@ -4,7 +4,7 @@
 - Cuenta de Oracle Cloud Infrastructure(test gratuito https://www.oracle.com/cloud/free/)
 - Cuenta de Github (https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
 
-### ¿Qué vamos a hacer?###
+### ¿Qué vamos a hacer?
 
 - Clonar repositorio Github
 - Configurar OLAM
@@ -17,7 +17,8 @@
 - Crear Container Registry 
 - Despliegue de aplicación en Container Instance 
 
-### Paso a Paso ##
+### Paso a Paso
+
 1. Crear
 
 https://user-images.githubusercontent.com/14284928/217976649-b8c72a52-9ed4-4757-a568-ea3580ccecd7.mov
