@@ -14,6 +14,14 @@
       repo: "{{ url_git }}"
       dest: "Race-to-the-Cloud-app"
 
+  - name: Busca Directorio
+    ansible.builtin.find:
+      paths: "/"
+      patterns: "Race-to-the-Cloud-app"
+    register: salida
+    
+  - debug:
+      msg: "{{ salida }}"
 
   - name: Build and push an image using existing credentials
     containers.podman.podman_image:
