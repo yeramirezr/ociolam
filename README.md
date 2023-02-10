@@ -64,16 +64,44 @@ https://user-images.githubusercontent.com/14284928/217977267-cfc96121-7b95-4101-
 6. Crear Credencial OCI, para relaizar conexión con Tenant
 
 ```
-Impiortante seguir todos los pasos del video
+Importante seguir todos los pasos del video
 ```
 
 
 https://user-images.githubusercontent.com/14284928/217977931-f72d80ae-f510-4f52-af31-197673bced2f.mov
 
 
-7. das
-8. asd
-9. das
+7. Crear Credencial Git, para conectar con GitHub
+
+```
+Se realiza con Usuario y Contraseña de GitHib
+```
+
+
+https://user-images.githubusercontent.com/14284928/217978058-770a8ebb-fc63-4a8b-872b-0b20f4f4c1f4.mov
+
+
+8. Crear Proyecto "Proyecto Race to the Cloud"
+
+```
+Menu > Proyectos > Añadir
+```
+
+
+https://user-images.githubusercontent.com/14284928/217978229-1eb7a5e7-fc7b-423c-b02c-1c38cfe41a76.mov
+
+
+9. Crear Template "	Creacion ADB"
+
+```
+Menu > Plantillas > Añadir
+```
+
+
+
+https://user-images.githubusercontent.com/14284928/217978340-ef6576f1-b656-4376-b178-beda5a67d928.mov
+
+
 10. sda
 11. sda
 12. sda
