@@ -14,17 +14,11 @@
       repo: "{{ url_git }}"
       dest: "/tmp/Race-to-the-Cloud-app"
 
-  - name: Login en Registry
-    containers.podman.podman_login:
-      username: "axmdrz5zetbw/oracleidentitycloudservice/felipe.basso@oracle.com"
-      password: 'n3EMpIgUVDs.PE+j0>d;'
-      registry: "scl.ocir.io"
+  - name: Build Imagen de Contenedor
+    shell: "podman build --tag ci-app /tmp/Race-to-the-Cloud-app/"
 
-  - name: Build and push an image using existing credentials
-    containers.podman.podman_image:
-      name: "scl.ocir.io/axmdrz5zetbw/ciregistry"
-      tag: "latest"
-      path: "/tmp/Race-to-the-Cloud-app/"
-      push: "yes"
-#      push_args:
-#        dest: "scl.ocir.io/axmdrz5zetbw"
+  - name: Tag Imagen
+    shell: "podman tag localhost/ci-app:latest scl.ocir.io/axmdrz5zetbw/cp-app:latest"
+
+  - name: Push Imagen
+    shell: "podman push scl.ocir.io/axmdrz5zetbw/ci-app:latest"
