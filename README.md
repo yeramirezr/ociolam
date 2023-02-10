@@ -1,14 +1,13 @@
-## Desliegue Automatizado Utilizando Oracle Linux Automation Platform 
+## Desliegue Automatizado Utilizando Oracle Linux Automation Platform (OLAM) ##
 
-### Requerimientos:
-
+### Requerimientos:###
 - Cuenta de Oracle Cloud Infrastructure(test gratuito https://www.oracle.com/cloud/free/)
 - Cuenta de Github (https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
 
 ### ¿Qué vamos a hacer?
 
 - Clonar repositorio Github
-- Configurar OKE
+- Configurar OLAM
 - Configurar Github Actions
 - Despliegue de aplicación
 	- Descargar imágen desde dockerhub
