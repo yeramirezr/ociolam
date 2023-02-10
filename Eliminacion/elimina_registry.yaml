@@ -1,0 +1,25 @@
+---
+- name: Elimina Registry
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  
+  vars_files:
+    - ../vault.yaml
+    - ../variables.yaml
+
+  tasks:
+  - name: Lista Registrys
+    oracle.oci.oci_artifacts_container_repository_facts:
+      compartment_id: "{{ compartment_ocid }}"
+      display_name: "{{ registry_name }}"
+    register: r_resultado
+
+  - set_fact:
+      registry_id: "{{ r_resultado.container_repositories[0].id }}"
+
+  - name: Elimina Registry
+    oracle.oci.oci_artifacts_container_repository:
+      repository_id: "{{ registry_id }}"
+      state: absent
+

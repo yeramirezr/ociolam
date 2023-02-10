@@ -1,0 +1,60 @@
+---
+- name: Elimina VCN
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  
+  vars_files:
+    - ../vault.yaml
+    - ../variables.yaml
+
+  tasks:
+  - name: Lista VCN
+    oracle.oci.oci_network_vcn_facts:
+      compartment_id: "{{ compartment_ocid }}"
+      display_name: "{{ vcn_name }}"
+    register: vcn_resultado
+
+  - set_fact:
+      vcns_id: "{{ vcn_resultado.vcns[0].id }}"
+
+  - set_fact:
+      dr_id: "{{ vcn_resultado.vcns[0].default_route_table_id }}"
+
+  - name: Update Default Route Para Remover Internet Gateway
+    oracle.oci.oci_network_route_table:
+      id: "{{ dr_id }}"
+      route_rules: []
+
+  - name: Lista Subnet
+    oracle.oci.oci_network_subnet_facts:
+      compartment_id: "{{ compartment_ocid }}"
+      display_name: "{{ subnet_name }}"
+    register: sn_resultado
+
+  - set_fact:
+      sn_id: "{{ sn_resultado.subnets[0].id }}"
+
+  - name: Elimina Subnet
+    oracle.oci.oci_network_subnet:
+      subnet_id: "{{ sn_id }}"
+      state: absent
+
+  - name: Lista Internet Gateway
+    oracle.oci.oci_network_internet_gateway_facts:
+      compartment_id: "{{ compartment_ocid }}"
+      display_name: "{{ ig_name }}"
+    register: ig_resultado
+
+  - set_fact: 
+      ig_id: "{{ ig_resultado.internet_gateways[0].id }}"
+
+  - name: Elimina Internet Gateway
+    oracle.oci.oci_network_internet_gateway:
+      ig_id: "{{ ig_id }}"
+      state: absent
+
+  - name: Elimina VCN
+    oracle.oci.oci_network_vcn:
+      vcn_id: "{{ vcns_id }}"
+      state: absent

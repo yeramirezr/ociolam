@@ -1,0 +1,25 @@
+---
+- name: Elimina Container Instance
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  
+  vars_files:
+    - ../vault.yaml
+    - ../variables.yaml
+
+  tasks:
+  - name: Lista Container Isntances
+    oracle.oci.oci_container_instances_container_instance_facts:
+      compartment_id: "{{ compartment_ocid }}"
+      display_name: "{{ ci_name }}"
+    register: ci_resultado
+
+  - set_fact:
+      ci_id: "{{ ci_resultado.container_instances[0].id }}"
+
+  - name: Elimina Container Isntances
+    oracle.oci.oci_container_instances_container_instance:
+      container_instance_id: "{{ ci_id }}"
+      state: absent
+

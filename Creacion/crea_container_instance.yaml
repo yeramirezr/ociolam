@@ -1,0 +1,44 @@
+---
+- name: Crea y Container Instance
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars_files:
+    - ../vault.yaml
+    - ../variables.yaml
+
+  tasks:
+  - name: Lista Subnet
+    oracle.oci.oci_network_subnet_facts:
+      compartment_id: "{{ compartment_ocid }}"
+      display_name: "{{ subnet_name }}"
+    register: sb_resultado
+
+  - set_fact:
+      sb_id: "{{ sb_resultado.subnets[0].id }}"
+
+  - name: Lista Availability Domains
+    oracle.oci.oci_identity_availability_domain_facts:
+      compartment_id: "{{ compartment_ocid }}"
+    register: ad_resultado
+
+  - set_fact:
+      ad_name: "{{ ad_resultado.availability_domains[0].name }}"
+
+  - name: Crea Instancia de Contenedor
+    oracle.oci.oci_container_instances_container_instance:
+      compartment_id: "{{ compartment_ocid }}"
+      display_name: "{{ ci_name }}"
+      availability_domain: "{{ ad_name }}"
+      shape: "{{ ci_shape }}"
+      shape_config: 
+        ocpus: "{{ ci_ocpu }}"
+        memory_in_gbs: "{{ ci_ram }}"
+      containers:
+#      - image_url: "nginx:latest"
+      - image_url: "scl.ocir.io/axmdrz5zetbw/gp-registry:latest"
+        display_name: "{{ co_name }}"
+      vnics:
+      - subnet_id: "{{ sb_id }}"
+

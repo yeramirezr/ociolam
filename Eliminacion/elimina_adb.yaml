@@ -1,0 +1,25 @@
+---
+- name: Elimina Instancia Autonomous Database Allways Free
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  
+  vars_files: 
+    - ../vault.yaml
+    - ../variables.yaml
+
+  tasks:
+  - name: Lista Todas las Instancias de ADB
+    oracle.oci.oci_database_autonomous_database_facts:
+       compartment_id: "{{ compartment_ocid }}"
+       display_name: "{{ adb_name }}"
+    register: resultado
+
+  - set_fact:
+      autonomous_database_id: "{{ resultado.autonomous_databases[0].id }}"
+
+  - name: Elimina ADB
+    oracle.oci.oci_database_autonomous_database:
+       autonomous_database_id: "{{ autonomous_database_id }}"
+       state: 'absent'
+    register: result

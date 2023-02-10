@@ -1,0 +1,31 @@
+---
+- name: Crea y Configura VCN
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars_files: 
+    - ../vault.yaml
+    - ../variables.yaml
+
+  tasks:
+  - name: Crea Topico de Notificacion
+    oracle.oci.oci_ons_notification_topic:
+      name: "{{ topic_name }}"
+      compartment_id: "{{ compartment_ocid}}"
+    register: tp_resultado
+
+  - set_fact:
+      tp_id: "{{ tp_resultado.notification_topic.topic_id }}"
+
+  - name: Crea Proyecto
+    oracle.oci.oci_devops_project:
+      name: "{{ project_name }}"
+      compartment_id: "{{ compartment_ocid}}"
+      notification_config: 
+        topic_id: "{{ tp_id }}"
+    register: py_resultado
+
+  - set_fact:
+      py_id: "{{ py_resultado.project.id }}"
+

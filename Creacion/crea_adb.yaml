@@ -1,0 +1,22 @@
+---
+- name: Crea Instancia Autonomous Database Allways Free
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  
+  vars_files:
+    - ../vault.yaml
+    - ../variables.yaml
+
+  tasks:
+  - name: Crea ADB (Always Free)
+    oracle.oci.oci_database_autonomous_database:
+        compartment_id: "{{ compartment_ocid }}"
+        cpu_core_count: "{{ adb_core }}"
+        display_name: "{{ adb_name }}"
+        admin_password: "{{ admin_password }}"
+        db_name: "{{ adb_db_name }}"
+        data_storage_size_in_tbs: "{{ adb_size }}"
+        #is_free_tier: true
+        state: 'present'
+    register: adb_resultado

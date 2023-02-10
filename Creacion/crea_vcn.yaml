@@ -1,0 +1,66 @@
+---
+- name: Crea y Configura VCN
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars_files: 
+    - ../vault.yaml
+    - ../variables.yaml
+
+  tasks:
+  - name: Crea VCN
+    oracle.oci.oci_network_vcn:
+      compartment_id: "{{ compartment_ocid }}"
+      display_name: "{{ vcn_name }}"
+      cidr_block: "{{ vcn_cidr }}"
+      dns_label: "{{ vcn_dns_label }}"
+    register: vcn_resultado
+
+  - set_fact:
+      vcn_id: "{{ vcn_resultado.vcn.id }}"
+
+  - name: Crea Internet Gateway
+    oracle.oci.oci_network_internet_gateway:
+      compartment_id: "{{ compartment_ocid }}"
+      vcn_id: "{{ vcn_id }}"
+      name: "{{ ig_name }}"
+      is_enabled: true
+    register: ig_resultado
+
+  - set_fact:
+      ig_id: "{{ ig_resultado.internet_gateway.id }}"
+
+  - name: Modifica Default Route de VCN Para Salida a Internter de VCN
+    oracle.oci.oci_network_route_table:
+      id: "{{ vcn_resultado.vcn.default_route_table_id }}"
+      route_rules:
+      - cidr_block: '0.0.0.0/0'
+        network_entity_id: '{{ ig_id }}'
+    register: rt_resultado
+
+  - set_fact:
+      rt_id: "{{ rt_resultado.route_table.id }}"
+
+  - name: Crea Subnets Publica
+    oracle.oci.oci_network_subnet:
+      compartment_id: "{{ compartment_ocid }}"
+      vcn_id: '{{ vcn_id }}'
+      cidr_block: "{{ subnet_cidr }}"
+      display_name: "{{ subnet_name }}"
+    register: sb_resultado
+
+  - set_fact:
+      subnet_id: "{{ sb_resultado.subnet.id }}"
+
+  - name: Agrega Reglas de Ingress en Subnet Publida
+    oracle.oci.oci_network_security_list:
+      id: "{{ vcn_resultado.vcn.default_security_list_id }}"
+      ingress_security_rules:
+        - source: "0.0.0.0/0"
+          protocol: "6"
+          tcp_options:
+            destination_port_range:
+              min: "8080"
+              max: "8080"
+      purge_security_rules: 'no'

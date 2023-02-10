@@ -1,0 +1,16 @@
+---
+- name: Crea Registry de Contenedores
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  
+  vars_files:
+    - ../vault.yaml
+    - ../variables.yaml
+
+  tasks:
+  - name: Crea Registry
+    oracle.oci.oci_artifacts_container_repository:
+      compartment_id: "{{ compartment_ocid }}"
+      display_name: "{{ registry_name }}"
+      is_public: true
