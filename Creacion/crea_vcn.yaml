@@ -8,20 +8,7 @@
     - ../vault.yaml
     - ../variables.yaml
 
-  vars:
-    - resultado.vcns[0].lifecycle_state: "FALSE"
-
   tasks:
-  - name: Valida si VCN Existe
-    oracle.oci.oci_network_vcn_facts:
-      compartment_id: "{{ compartment_ocid }}"
-      display_name: "{{ vcn_name }}"
-    register: resultado
-
-  - name: Finaliza playbook si la VCN Existe
-    ansible.builtin.meta: end_play
-    when: 
-      - resultado.vcns[0].lifecycle_state == "AVAILABLE"
 
   - name: Crea VCN
     oracle.oci.oci_network_vcn:
