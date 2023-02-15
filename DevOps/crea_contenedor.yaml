@@ -3,7 +3,7 @@
   hosts: all
 #  connection: local
   gather_facts: false
-  remote_user: opc
+  become_user: opc
 
   vars_files:
     - ../vault.yaml
