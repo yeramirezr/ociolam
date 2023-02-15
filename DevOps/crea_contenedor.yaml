@@ -30,7 +30,7 @@
 #
 
   - name: quien soy?
-    shell: "mount --make-rshared /"
+    shell: "sudo mount --make-rshared /"
 
   - name: Build Imagen de Contenedor
     shell: "podman build --tag ci-app /tmp/Race-to-the-Cloud-app/"
