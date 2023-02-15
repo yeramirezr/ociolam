@@ -3,7 +3,7 @@
   hosts: all
 #  connection: local
   gather_facts: false
-  become_user: opc
+  become_user: fbasso
 
   vars_files:
     - ../vault.yaml
