@@ -13,19 +13,11 @@
   - name: Clona Repositorio Git
     ansible.builtin.git:
       repo: "{{ url_git }}"
-      dest: "/tmp/Race-to-the-Cloud-app"
+      dest: "Race-to-the-Cloud-app"
 
-#  - name: Build and push an image using existing credentials
-#    containers.podman.podman_image:
-#      name: "ci-app"
-#      tag: "latest"
-#      path: "/tmp/Race-to-the-Cloud-app"
-#      push: yes
-#      push_args:
-#        dest: "scl.ocir.io/axmdrz5zetbw"
 
   - name: Build Imagen de Contenedor
-    shell: "podman build --tag ci-app /tmp/Race-to-the-Cloud-app/"
+    shell: "podman build --tag ci-app Race-to-the-Cloud-app/"
 
   - name: Tag Imagen
     shell: "podman tag localhost/ci-app:latest scl.ocir.io/axmdrz5zetbw/ci-app:latest"
