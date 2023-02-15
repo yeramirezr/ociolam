@@ -17,7 +17,7 @@
 
   - assert:
       that: 
-      - vcn_resultado.vcn.lifecycle_state == "AVAILABLE"
+        - vcn_resultado.vcns.lifecycle_state == "AVAILABLE"
 
   - name: Crea VCN
     oracle.oci.oci_network_vcn:
