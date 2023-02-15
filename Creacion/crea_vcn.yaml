@@ -15,7 +15,7 @@
       display_name: "{{ vcn_name }}"
     register: vcn_resultado
 
-  - asset:
+  - assert:
       that: 
       - vcn_resultado.vcns.lifecycle_state == "AVAILABLE"
 
