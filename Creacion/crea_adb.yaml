@@ -9,17 +9,6 @@
     - ../variables.yaml
 
   tasks:
-  - name: Lista Todas las Instancias de ADB
-    oracle.oci.oci_database_autonomous_database_facts:
-       compartment_id: "{{ compartment_ocid }}"
-       display_name: "{{ adb_name }}"
-    register: resultado
-
-  - name: Finaliza playbook si la ADB Existe
-    ansible.builtin.meta: end_play
-    when:
-      - resultado.autonomous_database[0].lifecycle_state == "AVAILABLE"
-
   - name: Crea ADB (Always Free)
     oracle.oci.oci_database_autonomous_database:
         compartment_id: "{{ compartment_ocid }}"
