@@ -14,9 +14,18 @@
       repo: "{{ url_git }}"
       dest: "/tmp/Race-to-the-Cloud-app"
 
+  - name: Crea Servicio
+    shell: "podman generate systemd --new --name podman -f ~/podman.service"
+
+  - name: Copia Servicio
+    shell: "mv -v ~/podman.service ~/.config/systemd/user/"
+
+  - name: Recrea
+    shell: "systemctl daemon-reload"
+
   - name: Levanta Servicio Podman
     ansible.builtin.systemd: 
-      name: podman
+      name: podman.service
       state: started
       scope: user
 
