@@ -1,6 +1,6 @@
 ---
 - name: Crea Imagen de Contenedor
-  hosts: podman
+  hosts: all
 #  connection: local
   gather_facts: false
   remote_user: opc
