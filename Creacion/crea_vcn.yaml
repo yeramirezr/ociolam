@@ -18,7 +18,7 @@
   - name: Finaliza playbook si la VCN Existe
     ansible.builtin.meta: end_play
     when: 
-      - resultado.vcns.lifecycle_state == "AVAILABLE"
+      - resultado.vcns[0].lifecycle_state == "AVAILABLE"
 
   - name: Crea VCN
     oracle.oci.oci_network_vcn:
