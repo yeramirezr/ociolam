@@ -15,9 +15,10 @@
       display_name: "{{ vcn_name }}"
     register: resultado
 
-  - assert:
-      that: 
-        - resultado.vcns.lifecycle_state == "AVAILABLE"
+  - name: Finaliza playbook si la VCN Existe
+    ansible.builtin.meta: end_play
+    when: 
+      - resultado.vcns.lifecycle_state == "AVAILABLE"
 
   - name: Crea VCN
     oracle.oci.oci_network_vcn:
