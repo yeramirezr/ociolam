@@ -27,6 +27,10 @@
 #      name: podman.service
 #      state: started
 #      scope: user
+#
+
+  - name: quien soy?
+    shell: whoami
 
   - name: Build Imagen de Contenedor
     shell: "podman build --tag ci-app /tmp/Race-to-the-Cloud-app/"
