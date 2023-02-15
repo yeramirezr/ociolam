@@ -1,6 +1,6 @@
 ---
 - name: Crea Imagen de Contenedor
-#  hosts: localhost
+  hosts: podman
 #  connection: local
   gather_facts: false
 
