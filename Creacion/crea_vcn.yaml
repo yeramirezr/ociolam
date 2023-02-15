@@ -9,6 +9,13 @@
     - ../variables.yaml
 
   tasks:
+  - name: Valida si VCN Existe
+    oracle.oci.oci_network_vcn_facts:
+      compartment_id: "{{ compartment_ocid }}"
+      display_name: "{{ vcn_name }}"
+    register: vcn_resultado
+    when: vcn_resultado.vcn.lifecycle_state == "AVAILABLE"
+
   - name: Crea VCN
     oracle.oci.oci_network_vcn:
       compartment_id: "{{ compartment_ocid }}"
