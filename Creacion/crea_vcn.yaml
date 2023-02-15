@@ -8,6 +8,9 @@
     - ../vault.yaml
     - ../variables.yaml
 
+  vars:
+    - resultado.vcns[0].lifecycle_state: "FALSE"
+
   tasks:
   - name: Valida si VCN Existe
     oracle.oci.oci_network_vcn_facts:
