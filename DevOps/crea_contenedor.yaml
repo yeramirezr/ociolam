@@ -35,7 +35,7 @@
     shell: "podman build --tag ci-app /tmp/Race-to-the-Cloud-app/"
 
   - name: Tag Imagen
-    shell: "podman tag localhost/ci-app:latest scl.ocir.io/axmdrz5zetbw/cp-app:latest"
+    shell: "podman tag localhost/ci-app:latest scl.ocir.io/axmdrz5zetbw/ci-app:latest"
 
   - name: Push Imagen
     shell: "podman push scl.ocir.io/axmdrz5zetbw/ci-app:latest"
