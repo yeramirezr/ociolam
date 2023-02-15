@@ -16,7 +16,7 @@
 
   - name: Levanta Servicio Podman
     ansible.builtin.systemd: 
-      name: podman.service
+      name: podman
       state: started
       scope: user
 
