@@ -15,27 +15,20 @@
       repo: "{{ url_git }}"
       dest: "/tmp/Race-to-the-Cloud-app"
 
-#  - name: Crea Servicio
-#    shell: "podman generate systemd --new --name podman -f ~/podman.service"
+  - name: Build and push an image using existing credentials
+    containers.podman.podman_image:
+      name: "ci-app"
+      tag: "latest"
+      path: "/tmp/Race-to-the-Cloud-app"
+      push: yes
+      push_args:
+        dest: "scl.ocir.io/axmdrz5zetbw"
 
-#  - name: Copia Servicio
-#    shell: "mv -v ~/podman.service ~/.config/systemd/user/"
-#  - name: Recrea
-#    shell: "systemctl daemon-reload"
+#  - name: Build Imagen de Contenedor
+#    shell: "podman build --tag ci-app /tmp/Race-to-the-Cloud-app/"
 
-#  - name: Levanta Servicio Podman
-#    ansible.builtin.systemd: 
-#      name: podman.service
-#      state: started
-#      scope: user
-#
+#  - name: Tag Imagen
+#    shell: "podman tag localhost/ci-app:latest scl.ocir.io/axmdrz5zetbw/ci-app:latest"
 
-
-  - name: Build Imagen de Contenedor
-    shell: "podman build --tag ci-app /tmp/Race-to-the-Cloud-app/"
-
-  - name: Tag Imagen
-    shell: "podman tag localhost/ci-app:latest scl.ocir.io/axmdrz5zetbw/ci-app:latest"
-
-  - name: Push Imagen
-    shell: "podman push scl.ocir.io/axmdrz5zetbw/ci-app:latest"
+#  - name: Push Imagen
+#    shell: "podman push scl.ocir.io/axmdrz5zetbw/ci-app:latest"
