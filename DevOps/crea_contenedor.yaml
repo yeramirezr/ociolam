@@ -1,7 +1,7 @@
 ---
 - name: Crea Imagen de Contenedor
   hosts: localhost
-  connection: local
+#  connection: local
   gather_facts: false
 
   vars_files:
@@ -14,20 +14,19 @@
       repo: "{{ url_git }}"
       dest: "/tmp/Race-to-the-Cloud-app"
 
-  - name: Crea Servicio
-    shell: "podman generate systemd --new --name podman -f ~/podman.service"
+#  - name: Crea Servicio
+#    shell: "podman generate systemd --new --name podman -f ~/podman.service"
 
-  - name: Copia Servicio
-    shell: "mv -v ~/podman.service ~/.config/systemd/user/"
+#  - name: Copia Servicio
+#    shell: "mv -v ~/podman.service ~/.config/systemd/user/"
+#  - name: Recrea
+#    shell: "systemctl daemon-reload"
 
-  - name: Recrea
-    shell: "systemctl daemon-reload"
-
-  - name: Levanta Servicio Podman
-    ansible.builtin.systemd: 
-      name: podman.service
-      state: started
-      scope: user
+#  - name: Levanta Servicio Podman
+#    ansible.builtin.systemd: 
+#      name: podman.service
+#      state: started
+#      scope: user
 
   - name: Build Imagen de Contenedor
     shell: "podman build --tag ci-app /tmp/Race-to-the-Cloud-app/"
