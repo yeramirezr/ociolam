@@ -18,5 +18,5 @@
       user_id: "{{ user_ocid }}"
     register: tk_resultado
 
-  - degub:
+  - debug:
       msg: "{{ tk_resultado }}"
