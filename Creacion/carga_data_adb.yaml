@@ -1,0 +1,19 @@
+---
+- name: Crea Instancia Autonomous Database Allways Free
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  
+  vars_files:
+    - ../vault.yaml
+    - ../variables.yaml
+
+  tasks:
+  - name: Lista
+    oracle.oci.oci_database_autonomous_database:
+        compartment_id: "{{ compartment_ocid }}"
+        display_name: "{{ adb_db_name }}"
+    register: adb_resultado
+
+  - debug:
+      msg: "{{ adb_resultado }}"
