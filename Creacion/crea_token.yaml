@@ -14,7 +14,7 @@
       user_id: "{{ user_ocid }}"
 
   - name: Lista Tokens
-     oracle.oci.oci_identity_auth_token_facts: 
+    oracle.oci.oci_identity_auth_token_facts: 
       user_id: "{{ user_ocid }}"
     register: tk_resultado
 
