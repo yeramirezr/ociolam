@@ -12,6 +12,7 @@
   - name: Crea Token
     oracle.oci.oci_identity_auth_token:
       user_id: "{{ user_ocid }}"
+      description: 'OLAM Token'
 
   - name: Lista Tokens
     oracle.oci.oci_identity_auth_token_facts: 
