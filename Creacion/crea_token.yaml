@@ -1,0 +1,22 @@
+---
+- name: Crea Token
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  
+  vars_files:
+    - ../vault.yaml
+    - ../variables.yaml
+
+  tasks:
+  - name: Crea Token
+    oracle.oci.oci_identity_auth_token:
+      user_id: "{{ user_ocid }}"
+
+  - name: Lista Tokens
+    oci_identity_auth_token_facts: 
+      user_id: "{{ user_ocid }}"
+    register: tk_resultado
+
+  - degub:
+      msg: "{{ tk_resultado }}"
