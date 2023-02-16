@@ -13,17 +13,17 @@
   - name: Clona Repositorio Git
     ansible.builtin.git:
       repo: "{{ url_git }}"
-      dest: "Race-to-the-Cloud-app"
+      dest: "{{ nombre_repo }}"
 
   - name: Podman Login
-    shell: 'podman login -u {{ usuario_oci }} -p "_#z]h#}#H>DOjdf41jH:" {{ registry_url }}'
+    shell: 'podman login -u {{ usuario_oci }} -p "{{ token }}" {{ registry_url }}'
 
 
   - name: Build Imagen de Contenedor
-    shell: "podman build --tag ci-app Race-to-the-Cloud-app/"
+    shell: "podman build --tag ci-app {{ nombre_repo }}/"
 
   - name: Tag Imagen
-    shell: "podman tag localhost/ci-app:latest scl.ocir.io/axmdrz5zetbw/ci-app:latest"
+    shell: "podman tag localhost/ci-app:latest {{ registry_url }}/{{ namespace_repo }}/ci-app:latest"
 
   - name: Push Imagen
-    shell: "podman push scl.ocir.io/axmdrz5zetbw/ci-app:latest"
+    shell: "podman push {{ registry_url }}/{{ namespace_repo }}/ci-app:latest"
