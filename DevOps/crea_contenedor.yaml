@@ -10,10 +10,22 @@
     - ../variables.yaml
 
   tasks:
+  - name: Crea Token
+    oracle.oci.oci_identity_auth_token:
+      user_id: "{{ user_ocid }}"
+      description: 'OLAM Token'
+    register: tk_resultado
+
+  - set_fact:
+      token: "{{ tk_resultado.auth_token.token }}"
+
   - name: Clona Repositorio Git
     ansible.builtin.git:
       repo: "{{ url_git }}"
       dest: "Race-to-the-Cloud-app"
+
+  - name: Podman Login
+    shell: "podman login -u {{ usuario_oci }} -p {{ token }} {{ registry_url }}"
 
 
   - name: Build Imagen de Contenedor
