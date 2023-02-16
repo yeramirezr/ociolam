@@ -1,6 +1,6 @@
 ---
 - name: Crea Imagen de Contenedor
-  hosts: localhost
+  hosts: podman
 #  connection: local
   gather_facts: false
   become: true
@@ -9,19 +9,7 @@
     - ../vault.yaml
     - ../variables.yaml
 
-  vars:
-    - token: "_#z]h#}#H>DOjdf41jH:"
-
   tasks:
-  - name: Crea Token
-    oracle.oci.oci_identity_auth_token:
-      user_id: "{{ user_ocid }}"
-      description: "{{ tk_description }}"
-    register: tk_resultado
-
-  - set_fact:
-      token: "{{ tk_resultado.auth_token.token }}"
-
   - name: Clona Repositorio Git
     ansible.builtin.git:
       repo: "{{ url_git }}"
