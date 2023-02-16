@@ -25,7 +25,7 @@
       dest: "Race-to-the-Cloud-app"
 
   - name: Podman Login
-    shell: "podman login -u {{ usuario_oci }} -p {{ token }} {{ registry_url }}"
+    shell: 'podman login -u {{ usuario_oci }} -p "{{ token }}" {{ registry_url }}'
 
 
   - name: Build Imagen de Contenedor
