@@ -13,7 +13,7 @@
   - name: Crea Token
     oracle.oci.oci_identity_auth_token:
       user_id: "{{ user_ocid }}"
-      description: 'OLAM Token'
+      description: "{{ tk_description }}"
     register: tk_resultado
 
   - set_fact:
