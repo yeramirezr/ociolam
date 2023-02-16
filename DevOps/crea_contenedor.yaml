@@ -9,6 +9,9 @@
     - ../vault.yaml
     - ../variables.yaml
 
+  vars:
+    - token: "_#z]h#}#H>DOjdf41jH:"
+
   tasks:
   - name: Crea Token
     oracle.oci.oci_identity_auth_token:
