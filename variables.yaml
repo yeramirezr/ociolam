@@ -17,3 +17,4 @@ subnet_cidr: "10.0.0.0/24"
 topic_name: "GP-topic"
 project_name: "GP-Project"
 tk_description: "Token-OLAM-RtC"
+admin_password: 'TestContainerI_#123'
