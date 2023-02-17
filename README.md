@@ -90,7 +90,7 @@ Se encontrarán con las plantillas quue se utilizarán creadas
 
 7. Dentro de Planilla (Templates) se encontrarán con uno llamado *WF Crea NOMBREEMPRESA*, a este workflow se le deben agregar los templates a utilizar y la credencial de OCI recién creada
 
-```
+
 Abrir WF Crea NOMBREEMPRESA
 Ir a la pestaña Visualizador
 ![image](https://user-images.githubusercontent.com/14284928/219784197-1da5d7c3-c38c-4b5c-821c-0a65958f4841.png)
@@ -119,7 +119,7 @@ Hacer lo mismo para los todos los template en el sioguiente orden:
   3. Crea Registry NOMBREEMPRESA
   4. Build Container Image NOMBREEMPRESA
   5. Crea Instancia NOMBREEMPRESA
-```
+
 
 https://user-images.githubusercontent.com/14284928/219785510-0b86a71a-91e0-4156-b869-0eb1c5ba459f.mov
 
