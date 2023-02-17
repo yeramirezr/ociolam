@@ -129,9 +129,30 @@ https://user-images.githubusercontent.com/14284928/219785510-0b86a71a-91e0-4156-
 8. Una vez creado el Workflow Ejecutarlo haciendo click en el botón Ejecutar
 ![image](https://user-images.githubusercontent.com/14284928/219785666-3b417e2f-cb60-4cdc-aeef-9a72a607f1f5.png)
 
+https://user-images.githubusercontent.com/14284928/219785785-a2eb9039-56c1-4162-8128-a72c53c27ac9.mov
 
-9. aadsd
-10. da
+
+9. Para probar la correcta ejecución del workflow ir a cloud.oracle.com > Menú Principal > Developer Service > Container Instances
+![image](https://user-images.githubusercontent.com/14284928/219786328-25193514-173a-4586-8bfe-e26b12a084f5.png)
+Dentro del compartment **RaceToCloud** creado recientemente ir a instancia llamada **GP-Instance** y dentro de este buscar la ip pública, 
+abrir una nueva pestaña en el navegador, pegar la ip y asignar el puerto 8080
+
+https://user-images.githubusercontent.com/14284928/219786853-281c8516-8c99-410a-ab6c-90e56bbe4ca6.mov
+
+
+10. Una vez validado el funcionamiento de la instancia, dentro de planillas editar el Workflow de eliminación y de la misma forma que en el punto 7, crear el workflow
+Usar el siguiente orden:
+  1.  Elimina Container Instance NOMBREEMPRESA 
+  2.  Elimina Registry NOMBREEMPRESA
+  3.  Elimina VCN NOMBREEMPRESA
+  4.  Elimina ADB NOMBREEMPRESA
+
+
+https://user-images.githubusercontent.com/14284928/219787420-1b47239d-b4ad-439f-bd8f-328aa998aec1.mov
+
+
+
+
 11. da
 12. da
 13. d
