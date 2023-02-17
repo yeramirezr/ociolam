@@ -6,7 +6,6 @@
   become: true
 
   vars_files:
-    - ../vault.yaml
     - ../variables.yaml
 
   tasks:
