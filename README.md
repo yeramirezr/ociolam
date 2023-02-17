@@ -88,16 +88,57 @@ Se encontrarán con las plantillas quue se utilizarán creadas
 
 
 
-7. dsdaad
-8. das
-9. da
+7. Dentro de Planilla (Templates) se encontrarán con uno llamado *WF Crea NOMBREEMPRESA*, a este workflow se le deben agregar los templates a utilizar y la credencial de OCI recién creada
+
+```
+Abrir WF Crea NOMBREEMPRESA
+Ir a la pestaña Visualizador
+![image](https://user-images.githubusercontent.com/14284928/219784197-1da5d7c3-c38c-4b5c-821c-0a65958f4841.png)
+
+Hacer click en el botón verde Iniciar
+![image](https://user-images.githubusercontent.com/14284928/219784373-e37da084-7fbd-4009-9585-5b3acccc50c6.png)
+
+Selecionar el Template Crea ADB NOMBREEMPRESA y click en Siguiente
+![image](https://user-images.githubusercontent.com/14284928/219784417-99effd9a-1868-46d7-8036-8265025b7274.png)
+
+En el grupo Credencial ir a la categoría Oracle Cloud Infrastructure, y selecionar la credencial de OCI creada en pasos anteriores. Una vez selecionada click en Siguiente
+<img width="656" alt="image" src="https://user-images.githubusercontent.com/14284928/219784594-a993b5e5-78f3-4c26-84d7-9b0c0c810ce7.png">
+
+NO HACER NINGÚN CAMBIO EN OTRAS CREDENCIALES y click en guardar
+
+El workflow debió cambiar a algo similar a la imágen
+![image](https://user-images.githubusercontent.com/14284928/219784989-34bf61f4-217d-4267-8686-7eb26436698a.png)
+
+Pasar el mouse sobre el nombre de la planilla agregada y hacer click en el símbolo + para agregar el siguiente template
+<img width="745" alt="image" src="https://user-images.githubusercontent.com/14284928/219785222-10ae741d-8f7c-4f7f-b1ea-955a43f2b438.png">
+
+Hacer lo mismo para los todos los template en el sioguiente orden:
+
+  1. Crea ADB NOMBREEMPRESA
+  2. Crea VCN NOMBREEMPRESA
+  3. Crea Registry NOMBREEMPRESA
+  4. Build Container Image NOMBREEMPRESA
+  5. Crea Instancia NOMBREEMPRESA
+```
+
+https://user-images.githubusercontent.com/14284928/219785510-0b86a71a-91e0-4156-b869-0eb1c5ba459f.mov
+
+
+
+
+8. Una vez creado el Workflow Ejecutarlo haciendo click en el botón Ejecutar
+![image](https://user-images.githubusercontent.com/14284928/219785666-3b417e2f-cb60-4cdc-aeef-9a72a607f1f5.png)
+
+
+9. aadsd
 10. da
 11. da
-12. d
-13. a
-14. sda
-15. asd
-16. das
-17. sda
-18. asd
-19. ad
+12. da
+13. d
+14. a
+15. sda
+16. asd
+17. das
+18. sda
+19. asd
+20. ad
