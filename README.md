@@ -20,7 +20,13 @@
 
 ### Paso a Paso
 
-1. Crear
+0. Crear Cuenta en git, usuar correo empresarial o personal (github.com)
+
+
+https://user-images.githubusercontent.com/14284928/219779574-ad656998-a63d-402a-87cd-b9658c84e401.mov
+
+
+1. Crear Repositorio Git
 
 https://user-images.githubusercontent.com/14284928/217976649-b8c72a52-9ed4-4757-a568-ea3580ccecd7.mov
 
@@ -40,19 +46,24 @@ Menu > Identity & Security > Compartmente > New Compartment
 https://user-images.githubusercontent.com/14284928/217977014-8c324c4f-0c7b-4781-8e6b-de335c80605d.mov
 
 
-4. Login Dentro de OLAM (https://158.101.114.83/)
+4. Login Dentro de OLAM (https://150.136.98.96/) en base a usuario y contraseña entregada. **Es un acceso por empresa**
 
 
 https://user-images.githubusercontent.com/14284928/217977128-936480e4-6dd3-44f1-afe5-5c5ec1326d8d.mov
 
 
-5. Crear Credencial Localhost, para realizar conexiones locales
+5. Crear Credencial OCI, esta permite la íntegración entre OLAM y OCI
 
 ```
 Menu > Credenciales > Añadir
+NOMBREMPRESA: es el nombre de cada empresa, no usar espacios ej: **si mi empresa se llama "Empresa Jovial" usar el nombre EmpresaJovial**
+
+Nombre: Credencial OCI *NOMBREEMPRESA*       
 ```
 
-https://user-images.githubusercontent.com/14284928/217977221-54813a8c-a65b-4de2-a11f-2b1906357a50.mov
+
+https://user-images.githubusercontent.com/14284928/219780483-1d5a04af-5650-452c-9c05-95d22af7a615.mov
+
 
 5.1. Test de credencial
 
