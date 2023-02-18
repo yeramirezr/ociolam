@@ -101,11 +101,11 @@ Ir a la pestaña Visualizador
 Hacer click en el botón verde Iniciar
 ![image](https://user-images.githubusercontent.com/14284928/219784373-e37da084-7fbd-4009-9585-5b3acccc50c6.png)
 
-Selecionar el Template Crea ADB NOMBREEMPRESA y click en Siguiente
-![image](https://user-images.githubusercontent.com/14284928/219784417-99effd9a-1868-46d7-8036-8265025b7274.png)
+Selecionar el Template *01. Crea ADB*  y click en Siguiente
+![image](https://user-images.githubusercontent.com/14284928/219827358-4cc74e23-7459-4489-891f-c6dc5ba0c5b6.png)
 
 En el grupo Credencial ir a la categoría Oracle Cloud Infrastructure, y selecionar la credencial de OCI creada en pasos anteriores. Una vez selecionada click en Siguiente
-<img width="656" alt="image" src="https://user-images.githubusercontent.com/14284928/219784594-a993b5e5-78f3-4c26-84d7-9b0c0c810ce7.png">
+<img width="636" alt="image" src="https://user-images.githubusercontent.com/14284928/219827399-9221c847-deea-47ef-a406-2ef7b952b708.png">
 
 NO HACER NINGÚN CAMBIO EN OTRAS CREDENCIALES y click en guardar
 
@@ -117,7 +117,7 @@ Pasar el mouse sobre el nombre de la planilla agregada y hacer click en el símb
 
 Hacer lo mismo para los todos los template en el sioguiente orden:
 
-  1. 01- Crea ADB
+  1. 01 - Crea ADB
   2. 02 - Crea VCN 
   3. 03 - Crea Registry 
   4. 04 - Build Container Image 
@@ -129,14 +129,13 @@ https://user-images.githubusercontent.com/14284928/219827225-593d0e73-30a9-4963-
 
 
 
-
-
-
-
 8. Una vez creado el Workflow Ejecutarlo haciendo click en el botón Ejecutar
 ![image](https://user-images.githubusercontent.com/14284928/219785666-3b417e2f-cb60-4cdc-aeef-9a72a607f1f5.png)
 
-https://user-images.githubusercontent.com/14284928/219785785-a2eb9039-56c1-4162-8128-a72c53c27ac9.mov
+
+
+https://user-images.githubusercontent.com/14284928/219827439-e4f8c53b-2b33-48a6-9add-30e2d2b7fe1a.mov
+
 
 
 9. Para probar la correcta ejecución del workflow ir a cloud.oracle.com > Menú Principal > Developer Service > Container Instances
@@ -144,30 +143,29 @@ https://user-images.githubusercontent.com/14284928/219785785-a2eb9039-56c1-4162-
 Dentro del compartment **RaceToCloud** creado recientemente ir a instancia llamada **GP-Instance** y dentro de este buscar la ip pública, 
 abrir una nueva pestaña en el navegador, pegar la ip y asignar el puerto 8080
 
-https://user-images.githubusercontent.com/14284928/219786853-281c8516-8c99-410a-ab6c-90e56bbe4ca6.mov
+
+
+https://user-images.githubusercontent.com/14284928/219827446-639a602f-6729-456b-bc4a-e627b312d0ce.mov
+
+
 
 
 10. Una vez validado el funcionamiento de la instancia, dentro de planillas editar el Workflow de eliminación y de la misma forma que en el punto 7, crear el workflow
 Usar el siguiente orden:
 
-  1.  Elimina Container Instance NOMBREEMPRESA 
-  2.  Elimina Registry NOMBREEMPRESA
-  3.  Elimina VCN NOMBREEMPRESA
-  4.  Elimina ADB NOMBREEMPRESA
-
-
-https://user-images.githubusercontent.com/14284928/219787420-1b47239d-b4ad-439f-bd8f-328aa998aec1.mov
+  1.  06 - Elimina Container Instance NOMBREEMPRESA 
+  2.  07 - Elimina Registry NOMBREEMPRESA
+  3.  08 - Elimina VCN NOMBREEMPRESA
+  4.  09 - Elimina ADB NOMBREEMPRESA
 
 
 
+https://user-images.githubusercontent.com/14284928/219827454-8aab05ea-753e-4e95-acde-67827d8d0372.mov
 
-11. da
-12. da
-13. d
-14. a
-15. sda
-16. asd
-17. das
-18. sda
-19. asd
-20. ad
+
+
+11. Para validar que todo fuera eliminado se debe revidar VCN, ADB, Registry y Container Instance
+
+
+https://user-images.githubusercontent.com/14284928/219827500-38c9a17e-f6f4-4026-aa59-889c1c7df781.mov
+
