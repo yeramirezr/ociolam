@@ -77,6 +77,8 @@ Cada usuario debe tener creados los siguientes templates:
   - 07 - Elimina Registry NOMBREEMPRESA
   - 08 - Elimina VCN NOMBREEMPRESA
   - 09 - Elimina ADB NOMBREEMPRESA
+  - NOMBREEMPRESA - WF Completo
+  - NOMBREEMPRESA - WF Elimina Todo
 
 ![image](https://user-images.githubusercontent.com/14284928/219827568-13004994-5fa3-4c4d-b518-69c2ba5dbcd6.png)
 
