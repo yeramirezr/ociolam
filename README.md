@@ -124,6 +124,8 @@ Selecionar el Template *01. Crea ADB*  y click en Siguiente
 ![image](https://user-images.githubusercontent.com/14284928/219827358-4cc74e23-7459-4489-891f-c6dc5ba0c5b6.png)
 
 En el grupo Credencial ir a la categoría Oracle Cloud Infrastructure, y selecionar la credencial de OCI creada en pasos anteriores. Una vez selecionada click en Siguiente
+
+
 <img width="636" alt="image" src="https://user-images.githubusercontent.com/14284928/219827399-9221c847-deea-47ef-a406-2ef7b952b708.png">
 
 NO HACER NINGÚN CAMBIO EN OTRAS CREDENCIALES y click en guardar
