@@ -18,6 +18,7 @@
 - Crear Container Registry 
 - Despliegue de aplicación en Container Instance 
 
+
 ### Paso a Paso
 
 0. Crear Cuenta en git, usuar correo empresarial o personal (github.com)
@@ -62,6 +63,22 @@ https://user-images.githubusercontent.com/14284928/217977014-8c324c4f-0c7b-4781-
 
 https://user-images.githubusercontent.com/14284928/217977128-936480e4-6dd3-44f1-afe5-5c5ec1326d8d.mov
 
+
+
+### Validaciones Previas
+
+Cada usuario debe tener creados los siguientes templates:
+  - 01 - Crea ADB
+  - 02 - Crea VCN 
+  - 03 - Crea Registry 
+  - 04 - Build Container Image 
+  - 05 - Crea Instancia 
+  - 06 - Elimina Container Instance NOMBREEMPRESA 
+  - 07 - Elimina Registry NOMBREEMPRESA
+  - 08 - Elimina VCN NOMBREEMPRESA
+  - 09 - Elimina ADB NOMBREEMPRESA
+
+![image](https://user-images.githubusercontent.com/14284928/219827568-13004994-5fa3-4c4d-b518-69c2ba5dbcd6.png)
 
 
 
