@@ -30,14 +30,13 @@ https://user-images.githubusercontent.com/14284928/219779574-ad656998-a63d-402a-
 
 1. Crear Repositorio Git
 
-```
 https://user-images.githubusercontent.com/14284928/217976649-b8c72a52-9ed4-4757-a568-ea3580ccecd7.mov
-```
 
 
 
 
-2. Clonar el siguiente repositorio Git  https://github.com/whiplash0104/Race-to-the-Cloud-app.git
+
+2. Clonar el **siguiente repositorio Git  https://github.com/whiplash0104/Race-to-the-Cloud-app.git**
 
 
 https://user-images.githubusercontent.com/14284928/217976766-5c5407ea-f329-499f-acd2-8d8b02d82e07.mov
@@ -46,7 +45,7 @@ https://user-images.githubusercontent.com/14284928/217976766-5c5407ea-f329-499f-
 
 
 
-3. Crear compartment llamado RaceToCloud
+3. Crear compartment llamado **RaceToCloud**
 
 ```
 Menu > Identity & Security > Compartmente > New Compartment
@@ -58,7 +57,7 @@ https://user-images.githubusercontent.com/14284928/217977014-8c324c4f-0c7b-4781-
 
 
 
-4. Login Dentro de OLAM (https://150.136.98.96/) en base a usuario y contraseña entregada. **Es un acceso por empresa**
+4. Login Dentro de OLAM en base a URL, usuario y contraseña entregada. **Es un acceso por empresa**
 
 
 https://user-images.githubusercontent.com/14284928/217977128-936480e4-6dd3-44f1-afe5-5c5ec1326d8d.mov
@@ -67,7 +66,7 @@ https://user-images.githubusercontent.com/14284928/217977128-936480e4-6dd3-44f1-
 
 
 5. Crear Credencial OCI, esta permite la íntegración entre OLAM y OCI
-NOMBREMPRESA: es el nombre de cada empresa, no usar espacios ej: **si mi empresa se llama "Empresa Jovial" usar el nombre EmpresaJovial**
+NOMBREMPRESA: es el nombre de cada empresa, no usar espacios ej: **si mi empresa se llama "Empresa Jovial" usar el nombre "EmpresaJovial"**
 
 ```
 Menu > Accesos > Credenciales > Añadir
@@ -92,10 +91,10 @@ Se encontrarán con las plantillas quue se utilizarán creadas
 
 
 
-7. Dentro de Planilla (Templates) se encontrarán con uno llamado *WF Crea NOMBREEMPRESA*, a este workflow se le deben agregar los templates a utilizar y la credencial de OCI recién creada
+7. Dentro de Planilla (Templates) se encontrarán con uno llamado *NOMBREEMPRESA - WF Completo*, a este workflow se le deben agregar los templates a utilizar y la credencial de OCI recién creada
 
 
-Abrir WF Crea NOMBREEMPRESA
+Abrir NOMBREEMPRESA - WF Completo 
 Ir a la pestaña Visualizador
 ![image](https://user-images.githubusercontent.com/14284928/219784197-1da5d7c3-c38c-4b5c-821c-0a65958f4841.png)
 
@@ -118,14 +117,18 @@ Pasar el mouse sobre el nombre de la planilla agregada y hacer click en el símb
 
 Hacer lo mismo para los todos los template en el sioguiente orden:
 
-  1. Crea ADB NOMBREEMPRESA
-  2. Crea VCN NOMBREEMPRESA
-  3. Crea Registry NOMBREEMPRESA
-  4. Build Container Image NOMBREEMPRESA
-  5. Crea Instancia NOMBREEMPRESA
+  1. 01- Crea ADB
+  2. 02 - Crea VCN 
+  3. 03 - Crea Registry 
+  4. 04 - Build Container Image 
+  5. 05 - Crea Instancia 
 
 
-https://user-images.githubusercontent.com/14284928/219785510-0b86a71a-91e0-4156-b869-0eb1c5ba459f.mov
+
+https://user-images.githubusercontent.com/14284928/219827225-593d0e73-30a9-4963-b7a9-0bb0680d6e74.mov
+
+
+
 
 
 
