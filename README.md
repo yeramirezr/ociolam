@@ -30,7 +30,9 @@ https://user-images.githubusercontent.com/14284928/219779574-ad656998-a63d-402a-
 
 1. Crear Repositorio Git
 
+```
 https://user-images.githubusercontent.com/14284928/217976649-b8c72a52-9ed4-4757-a568-ea3580ccecd7.mov
+```
 
 
 
